@@ -98,4 +98,8 @@ options(zhgebiet.base_url = "http://localhost:8080")
 
 ## License
 
-MIT © metaodi
+MIT © Stefan Oderbolz
+
+---
+
+Vibe coded during the Open Data Beer presentation of the API der Gebietsstammdaten des Kantons Zürich
