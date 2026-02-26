@@ -1,0 +1,7 @@
+{
+  "gemeindezuweisung": {
+    "gemeinde_code": 261, "gemeinde_name": "Zürich",
+    "bezirk_code": 111, "bezirk_name": "Zürich",
+    "raumplanungsregion_code": 101, "raumplanungsregion_name": "Stadt Zürich"
+  }
+}

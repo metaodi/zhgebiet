@@ -1,0 +1,6 @@
+{
+  "bezirke": [
+    { "gebietstyp_code": 2, "bezirk_code": 101, "bezirk_name": "Affoltern" },
+    { "gebietstyp_code": 2, "bezirk_code": 102, "bezirk_name": "Andelfingen" }
+  ]
+}

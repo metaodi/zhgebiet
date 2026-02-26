@@ -1,0 +1,14 @@
+{
+  "gemeindezuweisungen": [
+    {
+      "gemeinde_code": 1, "gemeinde_name": "Aeugst am Albis",
+      "bezirk_code": 101, "bezirk_name": "Affoltern",
+      "raumplanungsregion_code": 105, "raumplanungsregion_name": "Knonaueramt"
+    },
+    {
+      "gemeinde_code": 2, "gemeinde_name": "Affoltern am Albis",
+      "bezirk_code": 101, "bezirk_name": "Affoltern",
+      "raumplanungsregion_code": 105, "raumplanungsregion_name": "Knonaueramt"
+    }
+  ]
+}

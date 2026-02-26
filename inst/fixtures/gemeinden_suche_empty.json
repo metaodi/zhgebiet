@@ -1,0 +1,10 @@
+{
+  "name": "Zürich",
+  "treffer": [
+    {
+      "gemeinde": { "gemeinde_code": 261, "gemeinde_name": "Zürich" },
+      "bezirk": { "bezirk_code": 111, "bezirk_name": "Zürich" },
+      "raumplanungsregion": { "raumplanungsregion_code": 101, "raumplanungsregion_name": "Stadt Zürich" }
+    }
+  ]
+}
