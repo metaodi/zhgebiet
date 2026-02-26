@@ -1,0 +1,6 @@
+{
+  "raumplanungsregionen": [
+    { "gebietstyp_code": 6, "raumplanungsregion_code": 101, "raumplanungsregion_name": "Stadt Zürich" },
+    { "gebietstyp_code": 6, "raumplanungsregion_code": 102, "raumplanungsregion_name": "Weinland" }
+  ]
+}

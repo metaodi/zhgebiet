@@ -1,0 +1,15 @@
+{
+  "name": "Tha",
+  "treffer": [
+    {
+      "gemeinde": { "gemeinde_code": 184, "gemeinde_name": "Thalheim an der Thur" },
+      "bezirk": { "bezirk_code": 108, "bezirk_name": "Andelfingen" },
+      "raumplanungsregion": { "raumplanungsregion_code": 102, "raumplanungsregion_name": "Weinland" }
+    },
+    {
+      "gemeinde": { "gemeinde_code": 218, "gemeinde_name": "Thalwil" },
+      "bezirk": { "bezirk_code": 112, "bezirk_name": "Horgen" },
+      "raumplanungsregion": { "raumplanungsregion_code": 103, "raumplanungsregion_name": "Zimmerberg" }
+    }
+  ]
+}
