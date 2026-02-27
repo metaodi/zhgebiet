@@ -37,5 +37,12 @@ zh_get <- function(path, query = NULL) {
   }
 
   resp <- httr2::req_perform(req)
-  httr2::resp_body_json(resp, simplifyVector = FALSE)
+  body <- httr2::resp_body_json(resp, simplifyVector = FALSE)
+
+  # Check if the response contains an error key
+  if (!is.null(body[["error"]])) {
+    stop("API error: ", body[["error"]], call. = FALSE)
+  }
+
+  body
 }
