@@ -4,30 +4,38 @@
 #'
 #' Retrieves all municipalities in the Canton of Zurich.
 #'
+#' @param jahr Optional integer. Year to retrieve historical municipality data.
+#'   If `NULL` (default), returns current municipalities.
 #' @return A [tibble::tibble()] with columns:
 #'   `gebietstyp_code`, `gemeinde_code`, `gemeinde_name`.
 #' @export
 #' @examples
 #' \dontrun{
 #' zh_gemeinden()
+#' zh_gemeinden(jahr = 1992)
 #' }
-zh_gemeinden <- function() {
-  body <- zh_get("/api/gemeinden")
+zh_gemeinden <- function(jahr = NULL) {
+  query <- if (!is.null(jahr)) list(jahr = jahr) else NULL
+  body <- zh_get("/api/gemeinden", query = query)
   parse_list(body, "gemeinden")
 }
 
 #' Get a single municipality by code
 #'
 #' @param gemeinde_code Integer or character. The municipality code.
+#' @param jahr Optional integer. Year to retrieve historical municipality data.
+#'   If `NULL` (default), returns current municipality data.
 #' @return A one-row [tibble::tibble()] with municipality details.
 #' @export
 #' @examples
 #' \dontrun{
 #' zh_gemeinde(261)  # Zürich
+#' zh_gemeinde(261, jahr = 1992)
 #' }
-zh_gemeinde <- function(gemeinde_code) {
+zh_gemeinde <- function(gemeinde_code, jahr = NULL) {
   path <- paste0("/api/gemeinden/", gemeinde_code)
-  body <- zh_get(path)
+  query <- if (!is.null(jahr)) list(jahr = jahr) else NULL
+  body <- zh_get(path, query = query)
   parse_detail(body, "gemeinde")
 }
 
