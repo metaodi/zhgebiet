@@ -31,7 +31,7 @@ zh_gemeindenhist <- function() {
 zh_gemeindenhist_jahr <- function(jahr) {
   path <- paste0("/api/gemeindenhist/", jahr)
   body <- zh_get(path)
-  parse_list(body, "gemeindenhist")
+  parse_list(body, "gemeinden")
 }
 
 #' Get historical municipality detail for a specific year and code

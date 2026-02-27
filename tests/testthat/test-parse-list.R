@@ -72,3 +72,17 @@ test_that("parse_list returns correct tibble for gemeindenhist fixture", {
   expect_true("gemeinde_name" %in% names(result))
 })
 
+test_that("parse_list returns correct tibble for gemeindenhist_jahr fixture", {
+  body <- fixture("gemeindenhist_2020.json")
+  result <- zhgebiet:::parse_list(body, "gemeinden")
+
+  expect_s3_class(result, "tbl_df")
+  expect_equal(nrow(result), 2L)
+  expect_true("gebietstyp_code" %in% names(result))
+  expect_true("gemeinde_code" %in% names(result))
+  expect_true("gemeinde_name" %in% names(result))
+  expect_true("jahr" %in% names(result))
+  expect_equal(result$jahr, c(2020L, 2020L))
+})
+
+
