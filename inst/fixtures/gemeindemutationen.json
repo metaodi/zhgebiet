@@ -1,0 +1,20 @@
+{
+  "gemeindemutationen": [
+    {
+      "mutationstyp": "Namensänderung",
+      "gemeinde_code_alt": 226,
+      "gemeinde_name_alt": "Schlatt",
+      "gemeinde_code_neu": 226,
+      "gemeinde_name_neu": "Schlatt (ZH)",
+      "mutationsdatum": "1999-01-01"
+    },
+    {
+      "mutationstyp": "Fusion",
+      "gemeinde_code_alt": 212,
+      "gemeinde_name_alt": "Bertschikon",
+      "gemeinde_code_neu": 298,
+      "gemeinde_name_neu": "Wiesendangen",
+      "mutationsdatum": "2014-01-01"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "jahr": 2020,
+  "gemeinden": [
+    {
+      "gebietstyp_code": 3,
+      "gemeinde_code": 1,
+      "gemeinde_name": "Aeugst am Albis",
+      "jahr": 2020
+    },
+    {
+      "gebietstyp_code": 3,
+      "gemeinde_code": 2,
+      "gemeinde_name": "Affoltern am Albis",
+      "jahr": 2020
+    }
+  ]
+}

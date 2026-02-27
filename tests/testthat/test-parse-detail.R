@@ -47,3 +47,17 @@ test_that("parse_detail returns empty tibble for unknown key", {
   expect_s3_class(result, "tbl_df")
   expect_equal(nrow(result), 0L)
 })
+
+test_that("parse_detail returns correct tibble for gemeindenhist fixture", {
+  body <- fixture("gemeindenhist_2020_261.json")
+  result <- zhgebiet:::parse_detail(body, "gemeindenhist")
+
+  expect_s3_class(result, "tbl_df")
+  expect_equal(nrow(result), 1L)
+  expect_true("jahr" %in% names(result))
+  expect_true("gemeinde_code" %in% names(result))
+  expect_true("gemeinde_name" %in% names(result))
+  expect_equal(result$gemeinde_name, "Zürich")
+  expect_equal(result$gemeinde_code, 261L)
+})
+

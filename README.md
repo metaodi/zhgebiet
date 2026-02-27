@@ -68,6 +68,18 @@ zh_gemeindezuweisung(261) |>
 
 # API health check
 zh_health()
+
+# Historical municipalities
+zh_gemeindenhist()
+
+# Historical municipalities for a specific year
+zh_gemeindenhist_jahr(2020)
+
+# Historical municipality detail for a specific year and code
+zh_gemeindenhist_detail(2020, 261)
+
+# Municipality mutations (changes, mergers, etc.)
+zh_gemeindemutationen()
 ```
 
 ## Return shapes
@@ -86,6 +98,10 @@ zh_health()
 | `zh_gemeindezuweisungen()` | one per municipality | all 6 code+name columns |
 | `zh_gemeindezuweisung(code)` | 1 | all 6 code+name columns |
 | `zh_health()` | 1 | API health fields |
+| `zh_gemeindenhist()` | many | historical municipality records |
+| `zh_gemeindenhist_jahr(jahr)` | many | historical municipalities for year |
+| `zh_gemeindenhist_detail(jahr, code)` | 1 | historical municipality detail |
+| `zh_gemeindemutationen()` | many | municipality mutations/changes |
 
 Search functions accept `.include_query = TRUE` to prepend a `query`
 column containing the original search term.

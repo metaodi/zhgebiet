@@ -47,3 +47,42 @@ test_that("parse_list returns empty tibble for unknown key", {
   expect_s3_class(result, "tbl_df")
   expect_equal(nrow(result), 0L)
 })
+
+test_that("parse_list returns correct tibble for gemeindemutationen fixture", {
+  body <- fixture("gemeindemutationen.json")
+  result <- zhgebiet:::parse_list(body, "gemeindemutationen")
+
+  expect_s3_class(result, "tbl_df")
+  expect_equal(nrow(result), 2L)
+  expect_true("mutationstyp" %in% names(result))
+  expect_true("mutationsdatum" %in% names(result))
+  expect_true("gemeinde_code_alt" %in% names(result))
+  expect_true("gemeinde_code_neu" %in% names(result))
+  expect_equal(result$mutationstyp, c("Namensänderung", "Fusion"))
+})
+
+test_that("parse_list returns correct tibble for gemeindenhist fixture", {
+  body <- fixture("gemeindenhist.json")
+  result <- zhgebiet:::parse_list(body, "gemeindenhist")
+
+  expect_s3_class(result, "tbl_df")
+  expect_equal(nrow(result), 2L)
+  expect_true("jahr" %in% names(result))
+  expect_true("gemeinde_code" %in% names(result))
+  expect_true("gemeinde_name" %in% names(result))
+})
+
+test_that("parse_list returns correct tibble for gemeindenhist_jahr fixture", {
+  body <- fixture("gemeindenhist_2020.json")
+  result <- zhgebiet:::parse_list(body, "gemeinden")
+
+  expect_s3_class(result, "tbl_df")
+  expect_equal(nrow(result), 2L)
+  expect_true("gebietstyp_code" %in% names(result))
+  expect_true("gemeinde_code" %in% names(result))
+  expect_true("gemeinde_name" %in% names(result))
+  expect_true("jahr" %in% names(result))
+  expect_equal(result$jahr, c(2020L, 2020L))
+})
+
+
