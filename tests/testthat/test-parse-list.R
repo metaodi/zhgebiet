@@ -54,8 +54,11 @@ test_that("parse_list returns correct tibble for gemeindemutationen fixture", {
 
   expect_s3_class(result, "tbl_df")
   expect_equal(nrow(result), 2L)
-  expect_true("mutation_id" %in% names(result))
-  expect_true("mutation_datum" %in% names(result))
+  expect_true("mutationstyp" %in% names(result))
+  expect_true("mutationsdatum" %in% names(result))
+  expect_true("gemeinde_code_alt" %in% names(result))
+  expect_true("gemeinde_code_neu" %in% names(result))
+  expect_equal(result$mutationstyp, c("Namensänderung", "Fusion"))
 })
 
 test_that("parse_list returns correct tibble for gemeindenhist fixture", {
