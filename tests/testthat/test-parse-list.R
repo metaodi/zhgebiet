@@ -47,3 +47,25 @@ test_that("parse_list returns empty tibble for unknown key", {
   expect_s3_class(result, "tbl_df")
   expect_equal(nrow(result), 0L)
 })
+
+test_that("parse_list returns correct tibble for gemeindemutationen fixture", {
+  body <- fixture("gemeindemutationen.json")
+  result <- zhgebiet:::parse_list(body, "gemeindemutationen")
+
+  expect_s3_class(result, "tbl_df")
+  expect_equal(nrow(result), 2L)
+  expect_true("mutation_id" %in% names(result))
+  expect_true("mutation_datum" %in% names(result))
+})
+
+test_that("parse_list returns correct tibble for gemeindenhist fixture", {
+  body <- fixture("gemeindenhist.json")
+  result <- zhgebiet:::parse_list(body, "gemeindenhist")
+
+  expect_s3_class(result, "tbl_df")
+  expect_equal(nrow(result), 2L)
+  expect_true("jahr" %in% names(result))
+  expect_true("gemeinde_code" %in% names(result))
+  expect_true("gemeinde_name" %in% names(result))
+})
+

@@ -1,0 +1,22 @@
+{
+  "gemeindemutationen": [
+    {
+      "mutation_id": 1,
+      "mutation_datum": "2019-01-01",
+      "mutation_typ": "Fusion",
+      "gemeinde_code_alt": 100,
+      "gemeinde_name_alt": "Alte Gemeinde",
+      "gemeinde_code_neu": 200,
+      "gemeinde_name_neu": "Neue Gemeinde"
+    },
+    {
+      "mutation_id": 2,
+      "mutation_datum": "2020-01-01",
+      "mutation_typ": "Umbenennung",
+      "gemeinde_code_alt": 201,
+      "gemeinde_name_alt": "Alter Name",
+      "gemeinde_code_neu": 201,
+      "gemeinde_name_neu": "Neuer Name"
+    }
+  ]
+}
