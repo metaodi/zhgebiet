@@ -10,8 +10,8 @@
 library(zhgebiet)
 
 # Query all municipalities for the year 1992
-# This uses the jahr parameter to retrieve historical data
-result <- zh_gemeinden(jahr = 1992)
+# This uses the zh_gemeindenhist_jahr() function for historical data
+result <- zh_gemeindenhist_jahr(1992)
 
 # Display the results
 print(result)
@@ -20,22 +20,24 @@ print(result)
 # - gebietstyp_code: The area type code
 # - gemeinde_code: The municipality code (this is the BFS number)
 # - gemeinde_name: The municipality name
+# - jahr: The year
 
-# For clarity, we can rename the columns to show that gemeinde_code is the BFS number
+# For clarity, we can select and rename columns to show that gemeinde_code is the BFS number
 library(dplyr)
 
 result_with_bfs <- result |>
   select(
     gemeinde_id = gemeinde_code,      # Municipality ID (also BFS number)
     bfs_number = gemeinde_code,        # BFS (Federal Statistical Office) number
-    gemeinde_name                      # Municipality name
+    gemeinde_name,                     # Municipality name
+    jahr                               # Year
   )
 
 print(result_with_bfs)
 
 # You can also sort by BFS number
 result |>
-  select(gemeinde_code, gemeinde_name) |>
+  select(gemeinde_code, gemeinde_name, jahr) |>
   arrange(gemeinde_code) |>
   print()
 

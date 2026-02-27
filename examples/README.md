@@ -26,7 +26,7 @@ source("examples/gemeinden_1992_with_bfs.R")
 ```
 
 **Key Functions Used:**
-- `zh_gemeinden(jahr = 1992)` - Query municipalities for a specific year
+- `zh_gemeindenhist_jahr(1992)` - Query historical municipalities for a specific year
 
 **Note:** The `gemeinde_code` field represents the BFS number.
 
