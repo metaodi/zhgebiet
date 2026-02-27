@@ -11,6 +11,8 @@ of the Canton of Zurich. All functions return a
 [`tibble`](https://tibble.tidyverse.org/) so results integrate naturally
 with `dplyr` pipelines.
 
+The [documentation and code of the API are on GitHub](https://github.com/statistikZH/gebietsstammdaten_zh).
+
 ## Installation
 
 Install the development version from GitHub:
